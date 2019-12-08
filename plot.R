@@ -36,9 +36,8 @@ if (!exists("background")) {
     rm(map)+
     tm_add_legend(type='fill',labels=chartlegend$status, col=chartlegend$color)+
     tm_legend(position=c("left", "top"),text.size = 1.3)+
+    tm_layout(bg.color="lightblue",frame = TRUE,legend.width=2)+
     rm(chartlegend)}else {
-      
-      
       
       tm_shape(background)+
         tm_rgb() +
@@ -49,4 +48,5 @@ if (!exists("background")) {
         rm(map)+
         tm_add_legend(type='fill',labels=chartlegend$status, col=chartlegend$color)+
         tm_legend(position=c("left", "top"),text.size = 1.3)+
+        tm_layout(frame = TRUE,legend.width=2)+
         rm(chartlegend)}
